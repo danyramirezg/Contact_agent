@@ -1,4 +1,4 @@
-package Contact_agent;
+package contactagent;
 
 public class Agenda {
     private Contact[] contacts;
@@ -8,7 +8,7 @@ public class Agenda {
 
     }
 
-    public Agenda(int Size) {
+    public Agenda(int size) {
         this.contacts = new Contact[size];
     }
 
@@ -29,17 +29,18 @@ public class Agenda {
 
     }
 
-    public boolean existsContact(Contact c){
-        for (int i = 0; i < contacts.length; i++){
-            if(contacts[i] != null && c.equals(contacts[i])) {
+    public boolean existsContact(Contact c) {
+        for (int i = 0; i < contacts.length; i++) {
+            if (contacts[i] != null && c.equals(contacts[i])) {
                 return true;
             }
         }
         return false;
     }
-    public void listContacts(){
-        for(int i = 0; i < contacts.length; i++){
-            if(contacts[i] != null){
+
+    public void listContacts() {
+        for (int i = 0; i < contacts.length; i++) {
+            if (contacts[i] != null) {
                 System.out.println(contacts[i]);
             }
         }

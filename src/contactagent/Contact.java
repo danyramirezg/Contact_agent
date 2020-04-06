@@ -1,4 +1,4 @@
-package Contact_agent;
+package contactagent;
 
 public class Contact {
 
@@ -27,11 +27,7 @@ public class Contact {
     }
 
     public boolean equals(Contact cont) {
-        if (this.name.equalsIgnoreCase(cont.getName())) {
-            return true;
-        }
-
-        return false;
+        return this.name.equalsIgnoreCase(cont.getName());
     }
 
     @Override
