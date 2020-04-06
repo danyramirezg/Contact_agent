@@ -5,7 +5,6 @@ public class Agenda {
 
     public Agenda() {
         this.contacts = new Contact[10];
-
     }
 
     public Agenda(int size) {
