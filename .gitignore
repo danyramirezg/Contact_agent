@@ -1,3 +1,3 @@
-*.idea
-*.iml
-../agenda/.idea/workspace.xml
+.idea/
+Contact_agent.iml
+
