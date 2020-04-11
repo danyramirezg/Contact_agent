@@ -1,5 +1,7 @@
 package contactagent;
 
+import java.util.Objects;
+
 public class Contact {
 
     private String name;
@@ -7,7 +9,7 @@ public class Contact {
 
     public Contact(String name, String telephone) {
         this.name = name;
-        this.name = telephone;
+        this.telephone = telephone;
     }
 
     public String getName() {
@@ -26,9 +28,28 @@ public class Contact {
         this.telephone = telephone;
     }
 
-    public boolean equals(Contact cont) {
-        return this.name.equalsIgnoreCase(cont.getName());
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Contact contact = (Contact) o;
+        return Objects.equals(name, contact.name) &&
+                Objects.equals(telephone, contact.telephone);
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, telephone);
+    }
+
+    //    @Override
+//    public boolean equals(Object cont) {
+//        if (!(cont instanceof Contact)) {
+//            return false;
+//        }
+//        Contact that = (Contact) cont;
+//        return this.name.equalsIgnoreCase(that.getName());
+//    }
 
     @Override
     public String toString() {
